@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión UxPlus</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+    #resultados {
+      margin-top: 20px;
+      min-height: 200px;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="logAuditoria" class="mt-3 p-3 bg-light border rounded">
+    <h5>Ultimas auditorías</h5>
+  </div>
+  
+  <div class="container mt-5">
+    <header class="text-center">
+      <h1>Gestión UxPlus</h1>
+      <p class="lead">Alcanza tus objetivos hoy</p>
+    </header>
+
+    <!-- Botones de navegación -->
+    <div class="d-flex justify-content-center mt-4 gap-3">
+      <button class="btn btn-primary btn-lg" onclick="mostrarObjetivos()">
+        Consultar Objetivos
+      </button>
+      <button class="btn btn-secondary btn-lg" onclick="mostrarFormularios()">
+        Consultar Formularios
+      </button>
+    </div>
+
+    <!-- Contenedor para los resultados -->
+    <div id="resultados" class="row text-center">
+      <p class="text-muted">Selecciona una opción para ver los resultados.</p>
+    </div>
+  </div>
+
+  <!-- Modal para ver detalles -->
+  <div class="modal fade" id="modalDetalles" tabindex="-1" aria-labelledby="modalDetallesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDetallesLabel">Detalles</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <p class="text-muted">Aquí aparecerán los detalles seleccionados.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5 text-center text-muted">
+    © 2024 Gestión UxPlus. Todos los derechos reservados.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- App Scripts -->
+  <script src="app.js"></script>
+  <script src="formularios.js"></script>
+</body>
+</html>
