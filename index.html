@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ 
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -41,9 +42,9 @@
 </head>
 <body>
   <div id="logAuditoria" class="mt-3 p-3 bg-light border rounded">
-    <h5>Ultimas auditorías</h5>
+    <h5>Últimas auditorías</h5>
   </div>
-  
+
   <div class="container mt-5">
     <header class="text-center">
       <h1>Gestión UxPlus</h1>
@@ -52,12 +53,9 @@
 
     <!-- Botones de navegación -->
     <div class="d-flex justify-content-center mt-4 gap-3">
-      <button class="btn btn-primary btn-lg" onclick="mostrarObjetivos()">
-        Consultar Objetivos
-      </button>
-      <button class="btn btn-secondary btn-lg" onclick="mostrarFormularios()">
-        Consultar Formularios
-      </button>
+      <button class="btn btn-primary btn-lg" onclick="mostrarObjetivos()">Consultar Objetivos</button>
+      <button class="btn btn-secondary btn-lg" onclick="mostrarFormularios()">Consultar Formularios</button>
+      <button class="btn btn-info btn-lg" onclick="InformesApp.mostrarInformes()">Consultar Informes</button>
     </div>
 
     <!-- Contenedor para los resultados -->
@@ -88,11 +86,14 @@
   <footer class="mt-5 text-center text-muted">
     © 2024 Gestión UxPlus. Todos los derechos reservados.
   </footer>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- App Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
   <script src="app.js"></script>
   <script src="formularios.js"></script>
-</body>
+  <script src="libs/jspdf.umd.min.js"></script>
+  <script src="informes.js"></script>
+    </body>
 </html>
